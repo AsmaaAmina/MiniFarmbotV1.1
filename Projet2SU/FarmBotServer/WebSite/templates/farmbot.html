@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title >Farmbot</title>
+    <h1 class="hero-image">Farmbot</h1>
+    
+<style>
+  
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: 45px;
+        text-align:center;
+        font-family:Georgia, serif;
+        color: white;
+        text-shadow: 1px 1px rgb(85, 90, 85), 1px 1px rgb(218, 226, 218), -3px 0 4px rgb(240, 238, 238);
+        
+        
+    }
+    .hero-image {
+        background-image: url(https://www.outil-pedagogique-recyclage.fr/wp-content/uploads/2020/11/box-jardinage.jpg);
+        background-color: #cccccc;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+}
+    #btn1 {
+        position:absolute; 
+        left: 150px; 
+        top: 500px;    
+    }
+
+    #btn2 {
+        position:absolute; 
+        left: 320px; 
+        top: 500px;    
+    }
+    #btn3 {
+        position:absolute; 
+        left: 230px; 
+        top: 400px;    
+    }
+    #btn4 {
+        position:absolute; 
+        left: 230px; 
+        top: 600px;    
+    }
+    #btn5 {
+        position: absolute; 
+        left: 240px; 
+        top: 500px;    
+    }
+    #btn6 {
+        position: absolute; 
+        left: 450px; 
+        top: 400px;    
+    }
+    #btn7 {
+        position: absolute; 
+        left: 450px; 
+        top: 600px;    
+    }
+    #btn8 {
+        position: absolute; 
+        left: 800px; 
+        top: 500px; 
+        font-family:Georgia, serif;   
+    }
+    
+    div {
+        width: 480px;
+        height: 400px;
+        padding: 90px;
+        margin-top: 125px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius:  15px 15px 15px;
+       
+    }
+
+    .buttonsize {
+        font-size: 50px;
+    }
+
+    .linkbtnsize {
+        font-size: 20px;
+        height: 70px;
+    }
+        
+
+    .content-box {
+        box-sizing: border-box;
+    }
+
+    legend{
+        margin-top:0px;
+    }
+        
+    .bordure4 {
+        border: 2px solid rgb(0, 0, 0);
+        
+        padding-top: 10px;
+        border-radius:  15px 15px 15px;
+        color: black;
+        outline-offset: 20px; 
+    }
+
+
+</style>
+
+</head> 
+<body> 
+       
+
+<form  method="post" action="/">
+    
+    <div class="content-box" >
+              
+                    <fieldset style="margin: -130px; text-align: center "  >
+                        <legend style="font-family:Georgia, serif">Manual</legend>
+                    </fieldset>
+                            
+                
+                    <button type="submit" title="X left" class="btn btn-secondary buttonsize " id="btn1" name="leftbtn" value="leftbtn">
+                        <i class="fa fa-arrow-left"></i>      
+                    </button>
+                       
+                    <button type="submit" title="X right" class="btn btn-secondary buttonsize" id="btn2" name="rightbtn" value="rightbtn">
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+
+                    <button type="submit" title="Y up" class="btn btn-secondary buttonsize" id="btn3" name="upbtn" value="upbtn">
+                        <i class="fa fa-arrow-up"></i>
+                    </button>
+
+                    <button type="submit" title="Y down" class="btn btn-secondary buttonsize" id="btn4" name="downbtn" value="downbtn">
+                        <i class="fa fa-arrow-down"></i>
+                    </button>   
+                        
+                    <button type="submit" title="water the plant" class="btn btn-secondary buttonsize" id="btn5" name="watering" value="watering">
+                        <i class="fa fa-tint"></i>
+                    </button> 
+            
+                    <button type="submit" title="Z up" class="btn btn-secondary buttonsize" id="btn6" value="Zup" name="Zup">
+                        <i class="fa fa-arrow-circle-up"></i>
+                    </button>
+
+                    <button type="submit" title="Z down" class="btn btn-secondary buttonsize" id="btn7" name="Zdown" value="Zdown">
+                        <i class="fa fa-arrow-circle-down"></i>
+                    </button>
+                    
+                    
+                    
+                        
+                   
+    </div>              
+            
+</form>
+<div class="content-box" >
+    <form  method="post" action="/">
+        <input  type="submit" title="Get updated humidity" class="btn btn-secondary buttonsize"" id="btn9" name="Humidity" value="Humidity">
+       </form>  
+        
+</form>
+<pre> 
+    {{ h }} 
+    </pre>
+        
+        <button type="button" title="Configure time, frequency of watering, positions of the plants and the emergency humidity level. This part has not been implemented yet." onClick="window.location.href = 'auto.html'" class="btn btn-secondary linkbtnsize bordure4 " title="..." id="btn8">Automatic watering configuration </button>
+ 
+</div>
+
+
+</body>
+</html>
